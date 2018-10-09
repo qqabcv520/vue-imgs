@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>example</title>
+    <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover">
+</head>
+<link rel="stylesheet" href="../dist/style.css">
+<style>
+    .aspect-img {
+        width: 200px;
+        height: 200px;
+    }
+</style>
+
+<body>
+
+<div id="app">
+    <p>保持纵横比缩放图片，只保证图片的短边能完全显示出来</p>
+    <aspect-image class="aspect-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538995782216&di=8d5b0eb1357de68d87141066de1404fc&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F9358d109b3de9c82ddf742856181800a19d8432d.jpg"></aspect-image>
+
+    <p>不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素</p>
+    <aspect-image mode="scaleToFill" class="aspect-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538995782216&di=8d5b0eb1357de68d87141066de1404fc&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F9358d109b3de9c82ddf742856181800a19d8432d.jpg"></aspect-image>
+
+    <p>点击查看大图</p>
+    <img-preview class="aspect-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538995782216&di=8d5b0eb1357de68d87141066de1404fc&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F9358d109b3de9c82ddf742856181800a19d8432d.jpg"></img-preview>
+
+
+    <p>查看大图分组</p>
+    <img-preview class="aspect-img" group="1" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538995782216&di=8d5b0eb1357de68d87141066de1404fc&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F9358d109b3de9c82ddf742856181800a19d8432d.jpg"></img-preview>
+    <img-preview class="aspect-img" group="1" src="https://attach.bbs.miui.com/forum/201807/20/144948m233nnqn3c2f22s5.jpg.thumb.jpg"></img-preview>
+
+</div>
+
+
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="../dist/index.js"></script>
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        components: {
+            ImgPreview: VuePreview.ImgPreview,
+            AspectImage: VuePreview.AspectImage
+        },
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+</script>
+</body>
+</html>
