@@ -25,7 +25,7 @@ AspectImage
 import Vue from 'vue'
 import {AspectImage} from 'vue-imgs'
 
-Vue.component('VueClipboard', VueClipboard) // 注册组件
+Vue.component('AspectImage', AspectImage) // 注册组件
 ```
 ```
 <aspect-image class="aspect-img" src="https://xxx.jpg" mode="scaleToFill" ></aspect-image>
