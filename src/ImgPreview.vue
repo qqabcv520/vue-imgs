@@ -8,7 +8,6 @@
     import Vue from 'vue'
     import AspectImage from './AspectImage'
     import PreviewerComponent from './PhotoSwipe'
-    console.log(Vue)
     export default {
         name: 'ImgPreview',
         components: {
