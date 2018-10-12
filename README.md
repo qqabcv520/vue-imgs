@@ -1,14 +1,11 @@
 # vue-imgs
-
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
-
 
 vue图片组件
 
 [在线演示](https://qqabcv520.github.io/vue-imgs/examples/) 
 
 ## 安装
-
 npm
 ```
 npm i vue-imgs --save
@@ -23,7 +20,6 @@ yarn add vue-imgs
 ```
 
 ## 使用
-
 AspectImage
 ```
 import Vue from 'vue'
