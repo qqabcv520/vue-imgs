@@ -22,7 +22,7 @@ yarn add vue-imgs
 <script src="../dist/vue-imgs.js"></script>
 ```
 
-##使用
+## 使用
 
 AspectImage
 ```
