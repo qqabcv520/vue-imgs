@@ -21,6 +21,7 @@ yarn add vue-imgs
 ```
 
 ##使用
+
 AspectImage
 ```
 import Vue from 'vue'
