@@ -7,13 +7,21 @@
     "build": "webpack -p",
     "dev": "webpack -d"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qqabcv520/vue-imgs.git"
+  },
   "keywords": [
     "img",
     "preview",
-    "vue"
+    "vue",
+    "swiper"
   ],
   "author": "mifan",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qqabcv520/vue-imgs/issues"
+  },
   "dependencies": {},
   "peerDependency": {
     "vue": "^2.5.17",
