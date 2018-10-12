@@ -19,7 +19,7 @@ var config = {
     //文件导出的配置
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "index.js",
+        filename: "vue-imgs.js",
         libraryTarget: 'umd',//将你的 library 暴露为所有的模块定义下都可运行的方式
         library: 'VuePreview'
     },

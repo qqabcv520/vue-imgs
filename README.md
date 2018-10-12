@@ -1,13 +1,36 @@
 # vue-imgs
+
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+
+
 vue图片组件
 
 [在线演示](https://qqabcv520.github.io/vue-imgs/examples/) 
 
 ## 安装
-`npm i vue-imgs`  
+```
+npm i vue-imgs --save
+```
 或者  
-`yarn add vue-imgs`  
+```
+yarn add vue-imgs
+```
+或者直接引入
+```
+<script src="../dist/vue-imgs.js"></script>
+```
 
+##使用
+AspectImage
+```
+import Vue from 'vue'
+import {AspectImage} from 'vue-imgs'
+
+Vue.component('VueClipboard', VueClipboard) // 注册组件
+```
+```
+<aspect-image class="aspect-img" src="https://xxx.jpg" mode="scaleToFill" ></aspect-image>
+```
 ## TODO
 * 图片懒加载
 * 占位图
