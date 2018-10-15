@@ -20,7 +20,8 @@ yarn add vue-imgs
 ```
 
 ## 使用
-AspectImage
+#### AspectImage
+注册组件
 ```
 import Vue from 'vue'
 import {AspectImage} from 'vue-imgs'
@@ -29,11 +30,14 @@ Vue.component('AspectImage', AspectImage) // 注册组件
 ```
 ```
 <aspect-image class="aspect-img" src="https://xxx.jpg" mode="scaleToFill" ></aspect-image>
-/**
- * scaleToFill 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
- * aspectFill 保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
- */
 ```
+属性
+
+| 属性 | 类型 | 默认值  | 说明         |
+| ---- | ------ | ---------- | -------------- |
+| mode | String | aspectFill | 图片的缩放模式 |
+| src  | String | null       | 图片链接   |
+
 ## TODO
 * 图片懒加载
 * 占位图
