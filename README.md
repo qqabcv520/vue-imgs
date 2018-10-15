@@ -20,6 +20,9 @@ yarn add vue-imgs
 ```
 
 ## 使用
+[AspectImage](#AspectImage)
+[ImgPreview](#ImgPreview)
+
 #### AspectImage
 注册组件
 ```
