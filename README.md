@@ -58,7 +58,7 @@ export default {
 | :--- | :--- | :--- | :--- |
 | mode | String | aspectFill | 图片的缩放模式 |
 | src  | String | '' | 图片链接 |
-| group  | String|Number | (uuid) | 图片分组，同一组的图片，预览时可所有滑动 |
+| group  | String\|Number | (uuid) | 图片分组，同一组的图片，预览时可所有滑动 |
 | thumbSrc  | String | (默认为src) | 小图时的src |
 | order  | Number | 0 | 同分组图片排序 |
 
