@@ -43,7 +43,7 @@ export default {
 
 ### ImgPreview
 图片预览组件
-####注册组件
+#### 注册组件
 ```
 import {ImgPreview} from 'vue-imgs'
 export default {
