@@ -33,10 +33,10 @@ Vue.component('AspectImage', AspectImage) // 注册组件
 ```
 属性
 
-| 属性 | 类型 | 默认值  | 说明         |
-| ---- | ------ | ---------- | -------------- |
+| 属性 | 类型 | 默认值 | 说明         |
+| :--- | :--- | :--- | :--- |
 | mode | String | aspectFill | 图片的缩放模式 |
-| src  | String | null       | 图片链接   |
+| src  | String | null | 图片链接 |
 
 ## TODO
 * 图片懒加载
