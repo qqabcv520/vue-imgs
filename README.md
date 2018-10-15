@@ -23,21 +23,39 @@ yarn add vue-imgs
 #### AspectImage
 注册组件
 ```
-import Vue from 'vue'
 import {AspectImage} from 'vue-imgs'
-
-Vue.component('AspectImage', AspectImage) // 注册组件
-```
-```
-<aspect-image class="aspect-img" src="https://xxx.jpg" mode="scaleToFill" ></aspect-image>
+export default {
+  components: {
+      AspectImage
+  }
+}
 ```
 属性
 
-| 属性 | 类型 | 默认值 | 说明         |
+| 属性 | 类型 | 默认值 | 说明 |
 | :--- | :--- | :--- | :--- |
 | mode | String | aspectFill | 图片的缩放模式 |
 | src  | String | null | 图片链接 |
+
+#### ImgPreview
+注册组件
+```
+import {ImgPreview} from 'vue-imgs'
+export default {
+  components: {
+      ImgPreview
+  }
+}
+```
+属性
+
+| 属性 | 类型 | 默认值 | 说明 |
+| :--- | :--- | :--- | :--- |
+| mode | String | aspectFill | 图片的缩放模式 |
 | src  | String | null | 图片链接 |
+| group  | String|Number | (uuid) | 图片分组，同一组的图片，预览时可所有滑动 |
+| thumbSrc  | String | (默认为src) | 小图时的src |
+| order  | Number | 0 | 同分组图片排序 |
 
 ## TODO
 * 图片懒加载
