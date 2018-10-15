@@ -20,11 +20,12 @@ yarn add vue-imgs
 ```
 
 ## 使用
-[AspectImage](#aspectImage)  
-[ImgPreview](#imgPreview)
+* [AspectImage组件](#aspectimage)  
+* [ImgPreview组件](#imgpreview)
 
 #### AspectImage
-注册组件
+图片组件
+##### 注册组件
 ```
 import {AspectImage} from 'vue-imgs'
 export default {
@@ -33,7 +34,7 @@ export default {
   }
 }
 ```
-属性
+##### 属性
 
 | 属性 | 类型 | 默认值 | 说明 |
 | :--- | :--- | :--- | :--- |
@@ -41,7 +42,8 @@ export default {
 | src  | String | null | 图片链接 |
 
 #### ImgPreview
-注册组件
+图片预览组件
+#####注册组件
 ```
 import {ImgPreview} from 'vue-imgs'
 export default {
@@ -50,7 +52,7 @@ export default {
   }
 }
 ```
-属性
+##### 属性
 
 | 属性 | 类型 | 默认值 | 说明 |
 | :--- | :--- | :--- | :--- |
