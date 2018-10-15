@@ -30,6 +30,10 @@
                 type: String,
                 default: ''
             },
+            title: {
+                type: String,
+                default: ''
+            },
             /**
              * 缩略图src，不填直接显示原图
              */
@@ -90,7 +94,12 @@
              * 展示大图
              */
             showPre () {
-                this.previewer.list = this.componentList.map(value => ({src: value.src}))
+                this.previewer.list = this.componentList.map(value => {
+                    return {
+                        src: value.src,
+                        title: value.title,
+                    }
+                })
                 this.previewer.options = {
                     getThumbBoundsFn: index => {
                         let thumbnail = this.componentList[index].$el.getElementsByTagName('img')[0]
