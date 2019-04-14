@@ -6,6 +6,7 @@ vue图片组件
 [在线演示](https://qqabcv520.github.io/vue-imgs/examples/) 
 
 ## 安装
+
 npm
 ```
 npm i vue-imgs --save
@@ -20,12 +21,16 @@ yarn add vue-imgs
 ```
 
 ## 使用
+
 * [AspectImage组件](#aspectimage)  
 * [ImgPreview组件](#imgpreview)
 
 ### AspectImage
+
 图片组件
+
 #### 注册组件
+
 ```
 import {AspectImage} from 'vue-imgs'
 export default {
@@ -42,15 +47,13 @@ export default {
 | src  | `String` | null | 图片链接 |
 
 
-#### 缩放模式
-
-`'scaleToFill'` 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
-
-`'aspectFill'` 保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
 
 ### ImgPreview
+
 图片预览组件
+
 #### 注册组件
+
 ```
 import {ImgPreview} from 'vue-imgs'
 export default {
@@ -77,6 +80,7 @@ export default {
 `'aspectFill'` 保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
 
 ## TODO
+
 * 图片懒加载
 * 占位图
 * webP格式
