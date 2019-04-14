@@ -43,8 +43,8 @@ export default {
 
 | 属性 | 类型 | 默认值 | 说明 |
 | :--- | :--- | :--- | :--- |
-| mode | `String` | aspectFill | 图片的缩放模式 |
-| src  | `String` | null | 图片链接 |
+| mode | `string` | `'aspectFill'` | 图片的缩放模式 |
+| src  | `string` | `''` | 图片链接 |
 
 
 
@@ -66,12 +66,12 @@ export default {
 
 | 属性 | 类型 | 默认值 | 说明 |
 | :--- | :--- | :--- | :--- |
-| mode | `String` | aspectFill | 图片缩放模式 |
-| src  | `String` | '' | 图片链接 |
-| title  | `String` | '' | 图片标题，可以是HTML |
-| group  | `String\|Number` | (默认为uuid，即单独一组) | 指定图片分组索引，相同索引归属为一个分组，同组预览时可切换预览 |
-| thumbSrc  | `String` | (默认为src) | 小图时的src |
-| order  | `Number` | 0 | 同分组图片排序 |
+| mode | `string` | `'aspectFill'` | 图片缩放模式 |
+| src  | `string` | `''` | 图片链接 |
+| title  | `string` | `''` | 图片标题，可以是HTML |
+| group  | `string\|number` | (默认为uuid，即单独一组) | 指定图片分组索引，相同索引归属为一个分组，同组预览时可切换预览 |
+| thumbSrc  | `string` | (默认为src) | 小图时的src |
+| order  | `number` | 0 | 同分组图片排序 |
 
 #### 缩放模式
 
