@@ -41,6 +41,13 @@ export default {
 | mode | `String` | aspectFill | 图片的缩放模式 |
 | src  | `String` | null | 图片链接 |
 
+
+#### 缩放模式
+
+**scaleToFill** 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
+
+**aspectFill** 保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
+
 ### ImgPreview
 图片预览组件
 #### 注册组件
@@ -62,6 +69,12 @@ export default {
 | group  | `String\|Number` | (默认为uuid，即单独一组) | 指定图片分组索引，相同索引归属为一个分组，同组预览时可切换预览 |
 | thumbSrc  | `String` | (默认为src) | 小图时的src |
 | order  | `Number` | 0 | 同分组图片排序 |
+
+#### 缩放模式
+
+**scaleToFill** 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
+
+**aspectFill** 保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
 
 ## TODO
 * 图片懒加载
