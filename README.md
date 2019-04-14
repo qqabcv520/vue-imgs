@@ -71,7 +71,7 @@ export default {
 | title  | `string` | `''` | 图片标题，可以是HTML |
 | group  | `string\|number` | (默认为uuid，即单独一组) | 指定图片分组索引，相同索引归属为一个分组，同组预览时可切换预览 |
 | thumbSrc  | `string` | (默认为src) | 小图时的src |
-| order  | `number` | 0 | 同分组图片排序 |
+| order  | `number` | `0` | 同分组图片排序 |
 
 #### 缩放模式
 
