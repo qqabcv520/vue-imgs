@@ -59,7 +59,7 @@ export default {
 | mode | `String` | aspectFill | 图片缩放模式 |
 | src  | `String` | '' | 图片链接 |
 | title  | `String` | '' | 图片标题，可以是HTML |
-| group  | `String\|Number` | (默认为uuid，即单独一组) | 图片分组，同一组的图片，预览时可所有滑动 |
+| group  | `String\|Number` | (默认为uuid，即单独一组) | 指定图片分组唯一索引，相同索引归属为一个分组，预览时可左右滑动 |
 | thumbSrc  | `String` | (默认为src) | 小图时的src |
 | order  | `Number` | 0 | 同分组图片排序 |
 
