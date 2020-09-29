@@ -1,5 +1,5 @@
 <template>
-    <div class="__vp-wrapper">
+    <div class="__vp-wrapper" :style="wrapStyle">
         <div ref="imageWrapper" class="__vp-image-wrapper">
             <img v-if="src" ref="img" class="__vp-image" :src="src" :style="style"/>
         </div>
@@ -8,6 +8,8 @@
 </template>
 
 <script>
+    import imageModeStyle from './utils/image-mode-style'
+
     export default {
         name: 'AspectImage',
         props: {
@@ -16,6 +18,9 @@
             /**
              * scaleToFill 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
              * aspectFill 保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
+             * aspectFit 保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。
+             * widthFix 宽度不变，高度自动变化，保持原图宽高比不变
+             * heightFix 缩放模式，高度不变，宽度自动变化，保持原图宽高比不变
              */
             mode: {
                 type: String,
@@ -29,7 +34,8 @@
                 imgHeight: null,
                 wrapperWidth: null,
                 wrapperHeight: null,
-                style: {}
+                style: {},
+                wrapStyle: {}
             }
         },
         mounted () {
@@ -52,37 +58,15 @@
              * 重新计算图片布局，当wrapper宽度时，应该调用。
              */
             updateSize () {
-                this.wrapperWidth = this.$refs.imageWrapper.offsetWidth
-                this.wrapperHeight = this.$refs.imageWrapper.offsetHeight
-                if (this.mode === 'aspectFill') {
-                    this.doAspectFill()
-                } else if (this.mode === 'scaleToFill') {
-                    this.doScaleToFill()
-                }
-            },
-            doAspectFill () {
-                let style = {}
-                style.position = 'absolute'
-                let imgRatio = this.imgWidth / this.imgHeight
-                let wrapperRatio = this.wrapperWidth / this.wrapperHeight
-                if (imgRatio > wrapperRatio) { // 如果宽度大于高度
-                    style.height = '100%'
-                    style.top = '0'
-                    let minW = this.wrapperHeight / this.imgHeight * this.imgWidth // 缩小后的图片宽度
-                    style.left = (this.wrapperWidth - minW) / 2 + 'px'
-                } else {
-                    style.width = '100%'
-                    style.left = '0'
-                    let minH = this.wrapperWidth / this.imgWidth * this.imgHeight // 缩小后的图片高度
-                    style.top = (this.wrapperHeight - minH) / 2 + 'px'
-                }
-                this.style = style
-            },
-            doScaleToFill () {
-                this.style = {
-                    height: '100%',
-                    width: '100%'
-                }
+                this.$nextTick(() => {
+                    const { $refs, mode } = this
+                    const { offsetWidth: wrapperWidth, offsetHeight: wrapperHeight } = $refs.imageWrapper
+                    Object.assign(this, {
+                        wrapperWidth,
+                        wrapperHeight,
+                        ...(imageModeStyle[mode] || imageModeStyle['scaleToFill'])()
+                    })
+                })
             }
         },
         watch: {
